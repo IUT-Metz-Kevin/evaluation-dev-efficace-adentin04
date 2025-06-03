@@ -7,7 +7,7 @@ for(let i of minefield){
   compter++
  
  if(i=="*"){
-  compterBombe++
+compterBombe+=1
  
 }  
   if(i=="." && minefield[compter-1]=== "*" ||minefield[compter+1]=== "*"){
@@ -50,15 +50,32 @@ for(let i of minefield){
 }
 
 
- return (String(compterBombe),"",minefield);
+ return (String(compterBombe),minefield);
 
 }
+function Bombe(minefield: string){
+  let compterBombe=0;
+  for(let i of minefield){
+   if(i=="*"){
+compterBombe+=1
+ 
+}  }
+return compterBombe;
+}
 let mine = minesweeper(".*.**.\n....*.\n..*...")
-console.log(mine)
-Deno.test('remplacer le nombre de point pas les numéro correct ', () => {
-  assertEquals(mine, "1*2**2\n1234*2\n01*211");
+let bombe = Bombe(".*.**.\n....*.\n..*...")
+
+Deno.test('remplacer le nombre de point prémiere ligne', () => {
+  assertEquals(mine, "1*2**2\n");
+});
+Deno.test('remplacer le nombre de point deuxième ligne', () => {
+  assertEquals(mine, "1234*2\n");
+});
+Deno.test('remplacer le nombre de point troisième ligne', () => {
+  assertEquals(mine, "01*211\n");
 });
 
 Deno.test('Nombre Bombe', () => {
-  assertEquals(mine, "5");
+  assertEquals(bombe, 5);
 });
+
