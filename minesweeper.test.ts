@@ -2,16 +2,20 @@ import { assertEquals } from "jsr:@std/assert";
 
 function minesweeper(minefield: string): string {
   let compterBombe=0;
-for(let i of minefield){
-  if(i =="*"){
-  compterBombe++
+  let compterZone=0;
 
-  
+ console.log(minefield[0])
+  if(minefield[1]=="*"){
+    
+
+   minefield[0].replace(".","1")
+
+  return minefield;
   }
-
-}  return String(compterBombe);}
+return "";
+}
 let mine = minesweeper(".*.**.\n....*.\n..*...")
 console.log(mine)
-Deno.test('Chercher Bombe dans un tableau (*)', () => {
-  assertEquals(mine, "5");
+Deno.test('Rempalcer les cases vide avec le numéro des bombes a coté *100', () => {
+  assertEquals(mine, "1*.**.\n....*.\n..*...");
 });
