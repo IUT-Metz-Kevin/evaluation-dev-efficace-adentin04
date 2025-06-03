@@ -14,7 +14,7 @@ console.log(point+point+point );
           }
 }*/
 
-if(bombe === "."){
+if(bombe === "*"){
 return "1"
 }
 }
