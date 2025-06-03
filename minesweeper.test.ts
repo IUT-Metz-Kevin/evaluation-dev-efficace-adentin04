@@ -8,17 +8,18 @@ let ligne1= "*..";
 let ligne2= "..*";
 let ligne3="**.";       
 for(let i of ligne1){
-console.log(i);
 
-if(bombe === "*"){
+
+if(i === "*"){
   compterBombe++;
 
-}console.log(compterBombe)
 }
+}
+return compterBombe
 }
 let testGrille = grille();
-Deno.test('deuxième test', () => {
-  assertEquals(testGrille, "1");
+Deno.test('Vérifier que il compte correctement les bombes', () => {
+  assertEquals(testGrille, 1);
 });
 
 // class minesweeper{
