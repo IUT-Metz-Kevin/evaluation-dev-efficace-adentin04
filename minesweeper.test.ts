@@ -3,23 +3,21 @@ import { assertEquals } from "jsr:@std/assert";
 function grille(){
       let point = ".";
        let bombe = "*"
-      /*
-     
-      let tableau = [".",".","."]
-      *//*
-for(let i=0; i<3;i++){
-console.log(point+point+point );
-          for(let j=0;j<6;j++){
-
-          }
-}*/
+    let compterBombe=0;
+let ligne1= "*..";
+let ligne2= "..*";
+let ligne3="**.";       
+for(let i of ligne1){
+console.log(i);
 
 if(bombe === "*"){
-return "1"
+  compterBombe++;
+
+}console.log(compterBombe)
 }
 }
 let testGrille = grille();
-Deno.test('prémier test', () => {
+Deno.test('deuxième test', () => {
   assertEquals(testGrille, "1");
 });
 
