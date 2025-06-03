@@ -1,16 +1,26 @@
 import { assertEquals } from "jsr:@std/assert";
 
 function grille(){
-  let points = "."
-  if(points === "."){
-    points = "0"
-    console.log(points) 
-    return points;
-  }
+      let point = ".";
+       let bombe = "*"
+      /*
+     
+      let tableau = [".",".","."]
+      *//*
+for(let i=0; i<3;i++){
+console.log(point+point+point );
+          for(let j=0;j<6;j++){
+
+          }
+}*/
+
+if(bombe === "."){
+return "1"
+}
 }
 let testGrille = grille();
-Deno.test('blabla', () => {
-  assertEquals(testGrille, "0");
+Deno.test('prémier test', () => {
+  assertEquals(testGrille, "1");
 });
 
 // class minesweeper{
