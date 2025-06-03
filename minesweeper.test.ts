@@ -4,11 +4,11 @@ function minesweeper(minefield: string): string {
   let compterBombe=0;
   let compterZone=0;
 
- console.log(minefield[0])
+
   if(minefield[1]=="*"){
     
 
-   minefield[0].replace(".","1")
+  minefield= minefield.replace(".","1")
 
   return minefield;
   }
