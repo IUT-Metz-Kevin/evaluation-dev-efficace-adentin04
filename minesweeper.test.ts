@@ -2,15 +2,15 @@ import { assertEquals } from "jsr:@std/assert";
 
 function minesweeper(minefield: string): string {
 
-  if(minefield =="."){
-    minefield ="0"
+  if(minefield =="*"){
+    minefield +="1"
     console.log(minefield)
     return minefield
   }
   return "";
 }
-let a = minesweeper(".")
+let a = minesweeper("*")
 
-Deno.test('Case vide (.)', () => {
-  assertEquals(a, "0");
+Deno.test('Bombe (*)', () => {
+  assertEquals(a, "*1");
 });
