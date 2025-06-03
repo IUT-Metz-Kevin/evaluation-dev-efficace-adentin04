@@ -18,9 +18,7 @@ L'objectif est de créer une fonction `minesweeper` permettant de résoudre le j
 J'ai un tableau de mine représenté par la chaîne de caractère suivante :
 
 ```
-.*.**.
-....*.
-..*...
+REF
 ```
 
 La fonction minesweeper doit renvoyer la chaîne de caractère suivante :
