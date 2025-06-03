@@ -9,8 +9,21 @@ for(let i of minefield){
  if(i=="*"){
   compterBombe++
 }
-  if(i=="."){
+  if(i=="." && minefield[compter-1]=== "*" ||minefield[compter+1]=== "*"){
     minefield = minefield.replace(".",String(compterBombe))
+ 
+  }
+    if(i=="*" && minefield[compter-1]=== "." ||minefield[compter+1]=== "*"){
+    minefield = minefield.replace(".",String(compterBombe))
+   
+  }
+      if(i=="." && minefield[compter-1]=== "*" ||minefield[compter+1]=== "."){
+    minefield = minefield.replace(".",String(compterBombe))
+   
+  }
+    if(i=="." && minefield[compter-1]=== "**" ||minefield[compter+1]=== "."){
+    minefield = minefield.replace(".",String(compterBombe))
+
   }
 
 }
